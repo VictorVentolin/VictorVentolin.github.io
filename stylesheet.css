@@ -1,0 +1,21 @@
+* {
+        font-family: Helvetica, Sans-Serif;
+        
+}
+
+.added {
+    color: gray;
+    font-family: "Courier New", Courier, monospace
+}
+
+.refreshbutton {
+    background-color: red;
+    color: white;
+    width: 300px;
+    height: 60px;
+    padding-top:5px;
+}
+
+.mainbit {
+    max-width: 500px;
+}
