@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="stylesheet.css">
-    <link rel="shortcut icon" href="https://i.imgur.com/ntW4Ooc.png">
+    <link rel="shortcut icon" href="https://i.imgur.com/xhPE7Ty.png">
     <title>Theresa May no-confidence rumour generator</title>
 </head>
 <html>
 <center>
 <h1> How many no-confidence letters has Graham Brady received?</h1>
-<img src="https://i2-prod.manchestereveningnews.co.uk/incoming/article10260703.ece/ALTERNATES/s615/brady.jpg" height="250px">
+<div id="picture"><img src="https://i2-prod.manchestereveningnews.co.uk/incoming/article10260703.ece/ALTERNATES/s615/brady.jpg" height="250px"></div>
 <div id = "mainbit" class="mainbit"></div>
 <div class = "refreshbutton" onclick="location.reload();" onmouseover="" style="cursor: pointer;"><center><h3>Generate another rumour!</h3></center></div>
 <br /><a class="twitter-share-button"
@@ -18,8 +18,10 @@ Tweet</a>
 <script>
     //I am actually Graham Brady. My parents only taught me to count to 47 and at this point I'm too embarrassed to mention it.
     var mainbit = document.getElementById("mainbit");
-    var days = ["Sunday", "Monday", "Tuesday", "Wednesday"];
-    var sources = ["the Rt Hon Senior Brexiteer MP","an anonymous ERG member","Ladbrokes","Jacob Rees-Mogg","a hidden message on Laura Kuenssberg's Twitter page","an increasingly nervous-looking Michael Gove","a chap on Reddit","a careful analysis of Theresa May's facial expressions during a press conference", "an /r/ukpolitics user claiming to be Esther McVey", "counting the sheets of paper on his desk in a picture from 2011", "a reliable source from the shadow cabinet","Penny Mordaunt's plumber","an overheard conversation from the Downing Street livestream","a journalist from the Daily Telegraph","Twitter user @HardBrexitNOWDeathToTraitors, who claims to be in the 1922 committee","an octopus that predicted almost half the World Cup games correctly", "Philip Hammond, who asked to remain anonymous"];
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday"];
+    var images=["https://i2-prod.manchestereveningnews.co.uk/incoming/article10260703.ece/ALTERNATES/s615/brady.jpg","https://res.cloudinary.com/jpress/image/fetch/c_fill,f_auto,h_1088,q_auto:eco,w_1683/https://inews.co.uk/wp-content/uploads/2017/12/HONOURS-Politics-100084-e1514587560755.jpg","https://www.rugbyconservatives.co.uk/sites/www.rugbyconservatives.co.uk/files/styles/gallery_large/public/2018-07/JS50556621.jpg?itok=cGKAo-9O","http://altrincham.today/wp-content/uploads/2015/04/brady1-e1437048335382.jpg","https://schoolsweek.co.uk/wp-content/uploads/2017/12/Brady.jpg","https://cdn.images.express.co.uk/img/dynamic/139/590x/Sir-Graham-Brady-1046994.jpg?r=1542559348953"];
+    var sources = ["the Rt Hon Senior Brexiteer MP","an anonymous ERG member","Ladbrokes","Jacob Rees-Mogg","a hidden message on Laura Kuenssberg's Twitter page","an increasingly nervous-looking Michael Gove","a chap on Reddit","a careful analysis of Theresa May's facial expressions during a press conference", "an /r/ukpolitics user claiming to be Esther McVey", "counting the sheets of paper on his desk in a picture from 2011", "a reliable source from the shadow cabinet","Penny Mordaunt's plumber","an overheard conversation from the Downing Street livestream","Twitter user @HardBrexitNOWDeathToTraitors, who claims to be in the 1922 committee","an octopus that predicted almost half the World Cup games correctly", "Philip Hammond, who asked to remain anonymous", "a Ouija Board", "a message scrawled under the paint on the Mona Lisa","counting how many eyelashes he has today"];
+    document.getElementById("picture").innerHTML = "<img src='"+images[Math.floor(Math.random()*images.length)]+"' height='250px'>";
     mainbit.innerHTML = "<h2>Graham Brady has received <span class='added'>"+Math.floor(Math.random()*20+27) + "</span> letters of no confidence from Tory MPs. The 48th will be received on <span class='added'>"+ days[Math.floor(Math.random()*days.length)]+"</span> according to <span class='added'>"+sources[Math.floor(Math.random() * sources.length)]+"</span></h2>";
 </script>
 </html>
